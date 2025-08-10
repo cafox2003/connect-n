@@ -9,7 +9,7 @@ A highly configureable connect4-like CLI game
 1. Install Python 3.x
 2. Clone the repository: 
 ```bash
-https://github.com/cafox2003/connect-n.git
+git clone https://github.com/cafox2003/connect-n.git
 cd connect-n
 ```
 3. Run the program
