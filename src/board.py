@@ -8,7 +8,11 @@ class Board:
         self.empty_char = empty_char
         self.h_divider = h_divider
         self.v_divider = v_divider
-        self.board = [[empty_char for _ in range(width)] for _ in range(height)]
+        self.board = []
+        self.reset_board()
+
+    def reset_board(self):
+        self.board = [[self.empty_char for _ in range(self.width)] for _ in range(self.height)]
 
     def __eq__(self, other):
         if not isinstance(other, Board):
@@ -163,45 +167,3 @@ class Board:
     def check_list_win(self, game_char, spaces_list):
         return all(x == game_char for x in spaces_list)
 
-
-# my_board = Board(7, 6, 4, "_")
-
-#
-# for column_index in range(my_board.num_to_win - 1, my_board.width):
-#     for row_index in range(my_board.height - my_board.num_to_win + 1):
-#         potential_row_index = row_index
-#         potential_column_index = column_index
-#         for _ in range(my_board.num_to_win):
-#             my_board.board[potential_row_index][potential_column_index] = "c"
-#             potential_row_index += 1
-#             potential_column_index -= 1
-#         my_board.print_board()
-#         my_board.board = [[my_board.empty_char for _ in range(my_board.width)] for _ in range(my_board.height)]
-
-
-# for i in range(my_board.width):
-#     for j in range(my_board.height - my_board.num_to_win + 1):
-#         for k in range(my_board.num_to_win):
-#             my_board.board[j + k][i] = "c"
-#         my_board.print_board()
-#         my_board.board = [[my_board.empty_char for _ in range(my_board.width)] for _ in range(my_board.height)]
-
-
-# my_board = Board(6, 7, 5, " ")
-#
-#
-#
-# for i in range(4):
-#     my_board.add_piece("@", 5)
-# for i in range(3):
-#     my_board.add_piece("@", 4)
-# for i in range(2):
-#     my_board.add_piece("@", 3)
-# for i in range(1):
-#     my_board.add_piece("@", 2)
-#
-# for i in range(5):
-#     my_board.add_piece("#", i + 1)
-#
-# my_board.print_board()
-# print(my_board.check_player_win("#"))

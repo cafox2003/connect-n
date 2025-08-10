@@ -33,6 +33,7 @@ class AI_Player(Player):
 
     def get_best_move(self, board_states, visited, depth=0):
         if not board_states:
+            input("No board states")
             return random.randint(0,6)
 
         priority, count, board, original_move = heapq.heappop(board_states)

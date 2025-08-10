@@ -7,19 +7,6 @@ class Game_Handler:
         self.current_player = self.players[0]
         self.board = board
 
-    # def __init__(self, num_players, player_chars, width, height, num_to_win, empty_char, h_divider, v_divider):
-    #     self.board = Board(width, height, num_to_win, empty_char, h_divider, v_divider)
-    #     self.players = self.create_players(num_players, player_chars)
-    #     self.current_player = self.players[0]
-    #
-    # def create_players(self, num_players, player_chars):
-    #     players = []
-    #     for i in range(1, num_players+1):
-    #         input_value = input(f"Player {i}, enter your name: ")
-    #         players.append(Player(input_value, player_chars[i-1]))
-    #     players.append(AI_Player("AI", "🔵", ["🔴", "🔵"]))
-    #     return players
-
     def set_next_player(self):
         self.current_player = self.players[(self.players.index(self.current_player) + 1) % len(self.players)]
 
@@ -58,4 +45,9 @@ class Game_Handler:
             print(f"{self.current_player.name}, you have WON!")
         else:
             print("DRAW!")
+
+        play_again = input("Would you like to play again? [Y/n]: ")
+        if play_again == '' or play_again.lower()[0] != 'n':
+            self.board.reset_board()
+            self.game_loop()
 
