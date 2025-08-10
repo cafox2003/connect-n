@@ -2,7 +2,6 @@
 A highly configureable connect4-like CLI game
 
 ## Getting Started
----
 
 ### Playing the game
 1. Install Python 3.x
@@ -28,7 +27,7 @@ Options:
     - **empty_char** (string): Character to represent empty spaces ("_")
     - **v_divider** (string): Character to represent vertical dividers ("|")
     - **h_divider** (string): Character to represent horizontal dividers ("-")
-- (optional) **color** (string): color of the board, must match a key in `color_values.colors`. If not set, it defaults to white
+- **color** (string, optional): color of the board, must match a key in `color_values.colors`. If not set, it defaults to white
 
 #### `players`
 An array of player configurations. Each player object can contain:
