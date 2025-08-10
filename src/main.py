@@ -27,7 +27,7 @@ def load_config(file_path = "config.json"):
         return json.load(f)
 
 def create_board(board_config, color_config):
-    color = board_config['background_color'] if 'background_color' in board_config else 'white'
+    color = board_config['color'] if 'color' in board_config else 'white'
     empty_char = load_icon(color_config, board_config['icons']['empty_char'], color)
     h_divider = load_icon(color_config, board_config['icons']['h_divider'], color)
     v_divider = load_icon(color_config, board_config['icons']['v_divider'], color)
