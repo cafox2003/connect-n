@@ -2,9 +2,13 @@ from .game_handler import Game_Handler
 from .player import AI_Player, Player
 from .board import Board
 import json
+import sys
 
 def main():
-    config = load_config()
+    if len(sys.argv) > 1:
+        config = load_config(sys.argv[1])
+    else:
+        config = load_config()
 
     board = create_board(config['board'], config['color_values'])
     players = create_players(config['players'], config['color_values'])
