@@ -1,6 +1,8 @@
 # connect-n
 A highly configureable connect4-like CLI game
 
+![Screenshot of the connect-n](images/game.png)
+
 ## Getting Started
 
 ### Playing the game

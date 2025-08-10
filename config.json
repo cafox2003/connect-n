@@ -7,17 +7,16 @@
       "empty_char": "_",
       "v_divider": "|",
       "h_divider": "-"
-    },
-    "color": "green"
+    }
   },
   "players": [
     {
-      "icon": "*",
+      "icon": "@",
       "color": "blue"
     },
     {
       "name": "AI",
-      "icon": "*",
+      "icon": "@",
       "color": "red",
       "is_ai": true,
       "max_search_depth": 100,
